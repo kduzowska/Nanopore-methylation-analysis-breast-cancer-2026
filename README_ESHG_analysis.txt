@@ -49,9 +49,29 @@ Coverage summaries:
     - QC_coverage_frac_heatmap.png
     - QC_summary.csv
 
+#####################
 
+After this step pairwise DMR fine-grained with automatic segmentation have been ran. The resulting .bed and .txt files have been saved to appropriate patient folders. 
+For each .txt file a QC analysis and initial filtering has been conducted with the following script:
 
+QC analysis and initial quality filtering DMR.txt files - script: QC_DMR_script.py OR Interactive_QC_DMR.ipynb
 
+These two scripts are the same in terms of content but the Interactive_QC_DMR.ipynb script has been written in Jupyter Notebook in order to run each function step-by-step and inspect the file and the results, adjusting the parameters as preferred. This script has been used to adjust the filtering parameters and check if the script is correct. 
+Next, the QC_DMR_script.py script - a .py version of the interactive .ipynb script, has been uploaded to a server hosting all the files of interest and ran there for each pariwise DMR analysis using a Shell script python_script_overlap.sh to iterate over all .txt files in the folder where the script is located in. 
+
+Input to the script:
+- DMR.txt files after running DMR with automatic segmentation
+- Regions file with the regions of interest
+
+What the script does:
+- Calculates statistics and plots figures to visualize the distribution of cohen's h, score, num_sites and size (bp) distribution
+- Filters the DMRs that were classified by the algorithm as "different" and have >= 5 num_sites
+
+Output:
+    - QC plots of cohen's h, score and num_sites
+    - QC plot of size (bp) distribution
+    - Excel file with statistics for  cohen's h, score and num_sites
+    - a csv file cleaned, filtered (name = different, num_sites >= 5) and filtered with my regions txt file -> this file contains regions (genes) of interest that are differentially methylated between the compared samples
 
 
 
