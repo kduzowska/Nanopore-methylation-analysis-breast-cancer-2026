@@ -178,7 +178,6 @@ def plot_coverage_boxplot(summary, output_dir):
         color = "steelblue"
     )
 
-    # minimum acceptable coverage
     ax.axhline(
         y         = MIN_COVERAGE,
         color     = "red",
