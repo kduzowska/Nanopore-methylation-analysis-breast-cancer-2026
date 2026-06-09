@@ -69,6 +69,7 @@ Example code and settings:
 The resulting .bed and .txt files have been saved to appropriate patient folders. 
 For each .txt file a QC analysis and initial filtering has been conducted with the following script:
 
+QC AFTER DMR:
 QC analysis and initial quality filtering DMR.txt files - script: QC_DMR_script.py OR Interactive_QC_DMR.ipynb
 
 These two scripts are the same in terms of content but the Interactive_QC_DMR.ipynb script has been written in Jupyter Notebook in order to run each function step-by-step and inspect the file and the results, adjusting the parameters as preferred. This script has been used to adjust the filtering parameters and check if the script is correct. 
@@ -88,6 +89,14 @@ Output:
     - Excel file with statistics for  cohen's h, score and num_sites
     - a csv file cleaned, filtered (name = different, num_sites >= 5) and filtered with my regions txt file -> this file contains regions (genes) of interest that are differentially methylated between the compared samples
 
+#########################
+# ANALYSIS OF DMRs AND HEATMAP GENERATION
+
+Script: Filter_for_heatmap.py
+This script takes all .txt files after DMR processing, calculates delta 5mC and 5hmC and creates an output csv file that will then be used for creating the final heatmaps.
+
+Script: Create_heatmap.py
+This script takes the .csv files created by the Filter_for_heatmap.py script and generates heatmaps for 5mC and 5hmC separately (this needs to be specified in the script). 
 
 
 
