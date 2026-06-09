@@ -22,7 +22,7 @@ import pyranges as pr
 
 # Load the .txt DMR file
 filepath = sys.argv[1]
-REGIONS_FILE = "/home/nanopore/codex/KD_methylation/Analyses/DMR_auto_seg_Arek_visualization/P_091HS/dmr_breast_cancer_091HS/Breast_cancer_genes_regions_NanoPore_09DEC2025.txt"
+REGIONS_FILE = "path/to/regions.txt"
 
 dmr_file = pd.read_csv(filepath, sep = "\t")
 
