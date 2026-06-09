@@ -1,7 +1,7 @@
-#Analysis of methylation differences in breast cancer field cancerization - POSTER ESHG 2026
+# Analysis of methylation differences in breast cancer field cancerization - POSTER ESHG 2026
 ## This repository details the analysis conducted to obtain results presented at the ESHG 2026 conference
 
-The samples have been prepared and sequenced using Oxford Nanopore Technology PromethION with adaptive sampling and enrichment of targeted regions specified in regions.csv file attached.
+The samples have been prepared and sequenced using Oxford Nanopore Technology PromethION with adaptive sampling and enrichment of targeted regions.
 
 The initial steps involve standard file processing via EPI2ME: 
 
