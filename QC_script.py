@@ -24,9 +24,9 @@ import seaborn as sns
 from pathlib import Path
 import pyranges as pr
 
-BEDMETHYL_DIR = "/home/nanopore/codex/KD_methylation/Data/bedmethyl_files/all_files/"
-REGIONS_FILE  = "/home/nanopore/codex/KD_methylation/Analyses/DMR_auto_seg_Arek_visualization/genes_locations.txt"
-OUTPUT_DIR    = "/home/nanopore/codex/KD_methylation/Analyses/bedmethyl_QC/"
+BEDMETHYL_DIR = "path/to/bedmethyl_files/"
+REGIONS_FILE  = "path/to/genes_locations.txt"
+OUTPUT_DIR    = "path/to/output/folder/bedmethyl_QC/"
 MIN_COVERAGE  = 10
 CHUNK_SIZE    = 100_000  # number of rows to read at a time — controls memory usage
 
