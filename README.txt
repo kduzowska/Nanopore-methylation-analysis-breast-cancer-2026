@@ -1,11 +1,13 @@
-# Analysis of methylation differences in breast cancer field cancerization - POSTER ESHG 2026
+#Analysis of methylation differences in breast cancer field cancerization - POSTER ESHG 2026
 ## This repository details the analysis conducted to obtain results presented at the ESHG 2026 conference
 
 The samples have been prepared and sequenced using Oxford Nanopore Technology PromethION with adaptive sampling and enrichment of targeted regions specified in regions.csv file attached.
 
-The initial steps involve standard file processing via EPI2ME: basecalling (Dorado) and alignment to hg38.
+The initial steps involve standard file processing via EPI2ME: 
 
-1. Modkit 
+1. basecalling (Dorado) 
+2. alignment to hg38
+3. Modkit 
 Command:
 $MODKIT" pileup "$bam" "$out" \
     --cpg \ 
